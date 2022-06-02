@@ -1,4 +1,4 @@
-let arregloAleatorio: number[] = new Array(270);
+let arregloAleatorio: number[];
 let cantidadMenores: number = 0;
 let cantidadMayores: number = 0;
 
@@ -12,8 +12,8 @@ function setearEdades(edadMin: number = 18, edadMax: number = 40) {
   return arregloEdades;
 }
 
+arregloAleatorio = setearEdades();
 for (let i = 0; i < 270; i++) {
-  let arregloAleatorio = setearEdades();
   if (arregloAleatorio[i] < 21) {
     cantidadMenores = cantidadMenores + 1;
   } else {
@@ -22,7 +22,7 @@ for (let i = 0; i < 270; i++) {
 }
 
 console.log("La cantidad total de personas menores a 21 es:", cantidadMenores);
-console.log("La cantidad total de personas menores a 21 es:", cantidadMayores);
+console.log("La cantidad total de personas mayores a 21 es:", cantidadMayores);
 console.log(
   "La cantidad total de personas en el local es:",
   arregloAleatorio.length
