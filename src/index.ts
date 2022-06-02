@@ -16,13 +16,16 @@ arregloAleatorio = setearEdades();
 for (let i = 0; i < 270; i++) {
   if (arregloAleatorio[i] < 21) {
     cantidadMenores = cantidadMenores + 1;
-  } else {
+  } else if (arregloAleatorio[i] >= 21) {
     cantidadMayores = cantidadMayores + 1;
   }
 }
 
 console.log("La cantidad total de personas menores a 21 es:", cantidadMenores);
-console.log("La cantidad total de personas mayores a 21 es:", cantidadMayores);
+console.log(
+  "La cantidad total de personas de 21 años en adelante es:",
+  cantidadMayores
+);
 console.log(
   "La cantidad total de personas en el local es:",
   arregloAleatorio.length
